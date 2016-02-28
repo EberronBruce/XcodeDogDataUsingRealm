@@ -21,7 +21,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
+
         
     }
     
@@ -47,6 +47,22 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         let dog = self.dogs![indexPath.row]
         cell.textLabel!.text = "\(dog.name) is \(dog.age) years old!"
         return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            let dog = self.dogs![indexPath.row]
+            
+            do{
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.delete(dog)
+                }
+                
+            }
+            
+            updateUI()
+        }
     }
     
     
