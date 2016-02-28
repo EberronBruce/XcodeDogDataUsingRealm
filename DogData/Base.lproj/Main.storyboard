@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="380" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Dog View Controller-->
         <scene sceneID="JGY-HU-sck">
             <objects>
-                <viewController id="Pv5-3f-IPF" sceneMemberID="viewController">
+                <viewController id="Pv5-3f-IPF" customClass="AddDogViewController" customModule="DogData" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pYL-Gz-4DL"/>
                         <viewControllerLayoutGuide type="bottom" id="yH3-Uy-CQD"/>
@@ -75,7 +75,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ljc-32-3Eg">
-                                <rect key="frame" x="30" y="172" width="35" height="21"/>
+                                <rect key="frame" x="30" y="139" width="35" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Ter-1v-MKh"/>
                                 </constraints>
@@ -84,15 +84,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wP-wk-o0i">
-                                <rect key="frame" x="85" y="74" width="485" height="216"/>
+                                <rect key="frame" x="85" y="74" width="485" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FTY-aI-QpA"/>
+                                </constraints>
                             </pickerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-bg-g1a">
-                                <rect key="frame" x="114" y="320" width="446" height="30"/>
+                                <rect key="frame" x="114" y="254" width="446" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15T-FN-fvm">
-                                <rect key="frame" x="30" y="325" width="64" height="21"/>
+                                <rect key="frame" x="30" y="259" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="nwv-9r-hqE"/>
                                 </constraints>
@@ -101,8 +104,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QY-jt-Mpw">
-                                <rect key="frame" x="304" y="380" width="34" height="30"/>
+                                <rect key="frame" x="304" y="314" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveTapped:" destination="Pv5-3f-IPF" eventType="touchUpInside" id="Dct-Wv-vdv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,6 +127,10 @@
                             <constraint firstItem="Ljc-32-3Eg" firstAttribute="leading" secondItem="uEw-Kh-CFg" secondAttribute="leadingMargin" constant="10" id="u6y-5Q-ZSb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="Vjb-bg-g1a" id="MDC-Pl-0Ly"/>
+                        <outlet property="picker" destination="8wP-wk-o0i" id="ZAM-yK-uNK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6R-Y0-F3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

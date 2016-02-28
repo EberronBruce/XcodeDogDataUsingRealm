@@ -17,6 +17,7 @@
 		7A30A4411C82D7CE00D69266 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A30A43E1C82D7CE00D69266 /* RealmSwift.framework */; };
 		7A30A4421C82D7CE00D69266 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A30A43E1C82D7CE00D69266 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7A30A4461C82E78800D69266 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30A4451C82E78800D69266 /* Dog.swift */; };
+		7A30A4481C83462D00D69266 /* AddDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A30A4471C83462D00D69266 /* AddDogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		7A30A43D1C82D7CE00D69266 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		7A30A43E1C82D7CE00D69266 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		7A30A4451C82E78800D69266 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		7A30A4471C83462D00D69266 /* AddDogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				7A30A42B1C82D4F400D69266 /* AppDelegate.swift */,
 				7A30A42D1C82D4F400D69266 /* ViewController.swift */,
+				7A30A4471C83462D00D69266 /* AddDogViewController.swift */,
 				7A30A4451C82E78800D69266 /* Dog.swift */,
 				7A30A42F1C82D4F400D69266 /* Main.storyboard */,
 				7A30A4321C82D4F400D69266 /* Assets.xcassets */,
@@ -184,6 +187,7 @@
 				7A30A42E1C82D4F400D69266 /* ViewController.swift in Sources */,
 				7A30A42C1C82D4F400D69266 /* AppDelegate.swift in Sources */,
 				7A30A4461C82E78800D69266 /* Dog.swift in Sources */,
+				7A30A4481C83462D00D69266 /* AddDogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

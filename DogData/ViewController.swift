@@ -19,22 +19,23 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let dogi = Dog()
-        dogi.name = "Sean"
-        dogi.age = 80
-        
-        //Setting up realm
-        let realm = try! Realm()
-        //Saving the dogi instance
-        try! realm.write {
-            realm.add(dogi)
-        }
-        
-        self.dogs = realm.objects(Dog)
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        updateUI()
+    }
+    
+    func updateUI(){
+        //Setting up realm
+        let realm = try! Realm()
+        self.dogs = realm.objects(Dog)
+        
+        self.tableView.reloadData()
+
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
